@@ -1,0 +1,135 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f0f4f8;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #2c3e50;
+}
+
+#map {
+    height: 500px;
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #e0e0e0;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    animation: spin 1s linear infinite;
+    margin: 100px auto;
+    display: block;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#locate-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+#locate-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+#locate-btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+#allow-location-btn {
+    display: none;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 20px auto;
+}
+
+#allow-location-btn:hover {
+    background-color: #27ae60;
+    transform: translateY(-2px);
+}
+
+#allow-location-btn:active {
+    transform: translateY(0);
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #map {
+        height: 70vh;
+    }
+
+    #spinner {
+        margin-top: 50px;
+    }
+
+    #locate-btn {
+        position: static;
+        margin: 10px auto;
+        display: block;
+        width: 90%;
+        max-width: 300px;
+    }
+
+    #allow-location-btn {
+        width: 90%;
+        max-width: 300px;
+    }
+}

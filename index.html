@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locate Me!</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Your Current Location on the Map</h1>
+
+    <button id="allow-location-btn" onclick="requestLocation()">Allow My Location</button>
+    <button id="locate-btn" onclick="goToLocation()">Go to My Location</button>
+
+    <div id="spinner"></div>
+    <div id="map"></div>
+
+    <footer>
+        <p>&copy; 2024 Faizal Aziz. All rights reserved.</p>
+    </footer>
+
+
+
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
