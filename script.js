@@ -25,9 +25,12 @@ function showMap(position) {
         attribution: '© OpenStreetMap'
     }).addTo(map);
 
-    userMarker = L.marker([userLat, userLng]).addTo(map)
-        .bindPopup("You are here!")
-        .openPopup();
+    setTimeout(function() {
+        map.invalidateSize();
+        userMarker = L.marker([userLat, userLng]).addTo(map)
+            .bindPopup("You are here!")
+            .openPopup();
+    }, 100);
 
     document.getElementById('spinner').style.display = 'none';
     document.getElementById('map').style.display = 'block';
