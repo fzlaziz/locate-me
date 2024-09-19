@@ -133,3 +133,34 @@ footer p {
         max-width: 300px;
     }
 }
+
+
+#location-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+}
+
+#location-list li {
+    background-color: #ecf0f1;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+    color: #2c3e50;
+    transition: background-color 0.3s ease;
+}
+
+#location-list li:hover {
+    background-color: #dcdde1;
+}
+
+#location-list li span {
+    font-weight: bold;
+    color: #3498db;
+    margin-left: 10px;
+}
